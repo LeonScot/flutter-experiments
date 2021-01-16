@@ -66,17 +66,63 @@ class _MyHomePageState extends State<MyHomePage> {
                           flex: 8,
                           child: Container(
                             color: Colors.blueAccent,
-                            child: Text('breadcrumb'),
+                            child: Text(
+                              'Breadcrumb',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                         ),
                         Expanded(
                           flex: 2,
                           child: Container(
                             color: Colors.purple,
-                            child: Text('breadcrumb'),
+                            child: Text(
+                              'Running',
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                         ),
                       ],
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      color: Colors.black45,
+                    ),
+                  ),
+                  Expanded(
+                    flex: 7,
+                    child: Container(
+                      color: Colors.redAccent,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Card(
+                                child: Text('card 1'),
+                              ),
+                              Card(
+                                child: Text('card 2'),
+                              ),
+                            ],
+                          ),
+                          Card(
+                            child: Text('card 3'),
+                          ),
+                          Card(
+                            child: Text('card 4'),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 11,
+                    child: Container(
+                      color: Colors.limeAccent,
                     ),
                   ),
                 ],
