@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyStatefulWidget extends StatefulWidget {
-  MyStatefulWidget({Key key}) : super(key: key);
+class DashboardTable extends StatefulWidget {
+  DashboardTable({Key key}) : super(key: key);
 
   @override
-  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
+  _DashboardTableState createState() => _DashboardTableState();
 }
 
-/// This is the private State class that goes with MyStatefulWidget.
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _DashboardTableState extends State<DashboardTable> {
   static const int numItems = 20;
   List<bool> selected = List<bool>.generate(numItems, (index) => false);
 

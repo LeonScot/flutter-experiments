@@ -27,7 +27,7 @@ class Content extends StatelessWidget {
               child: Container(
                 margin: EdgeInsets.all(10),
                 // color: Colors.limeAccent,
-                child: MyStatefulWidget(),
+                child: DashboardTable(),
               ),
             ),
           ],
