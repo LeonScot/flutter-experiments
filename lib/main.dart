@@ -96,24 +96,32 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Container(
                       color: Colors.redAccent,
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Card(
-                                child: Text('card 1'),
-                              ),
-                              Card(
-                                child: Text('card 2'),
-                              ),
-                            ],
+                          Expanded(
+                            child: Column(
+                              children: [
+                                Expanded(
+                                  child: Card(
+                                    child: Text('card 1'),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Card(
+                                    child: Text('card 2'),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                          Card(
-                            child: Text('card 3'),
+                          Expanded(
+                            child: Card(
+                              child: Text('card 3'),
+                            ),
                           ),
-                          Card(
-                            child: Text('card 4'),
+                          Expanded(
+                            child: Card(
+                              child: Text('card 4'),
+                            ),
                           ),
                         ],
                       ),
