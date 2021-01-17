@@ -16,33 +16,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     return SingleChildScrollView(
       child: SizedBox(
         width: double.infinity,
-        child: DataTable(
-          columns: const <DataColumn>[
-            DataColumn(
-              label: Text('Store Name'),
-            ),
-            DataColumn(
-              label: Text('Service Name'),
-            ),
-            DataColumn(
-              label: Text('Date'),
-            ),
-            DataColumn(
-              label: Text('Message'),
-            ),
-          ],
-          rows: List<DataRow>.generate(
-            numItems,
-            (index) => DataRow(
-              cells: [
-                DataCell(Text('Magento $index | D365')),
-                DataCell(Text('Customer Create')),
-                DataCell(Text('18 Jul 2019 18:07:05')),
-                DataCell(Text('Inventory  for ”Phones” successfully synced')),
-              ],
-            ),
-          ),
-        ),
+        child: _dataTable(),
       ),
     );
   }
@@ -54,33 +28,37 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         scrollDirection: Axis.vertical,
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          child: DataTable(
-            columns: const <DataColumn>[
-              DataColumn(
-                label: Text('Store Name'),
-              ),
-              DataColumn(
-                label: Text('Service Name'),
-              ),
-              DataColumn(
-                label: Text('Date'),
-              ),
-              DataColumn(
-                label: Text('Message'),
-              ),
-            ],
-            rows: List<DataRow>.generate(
-              numItems,
-              (index) => DataRow(
-                cells: [
-                  DataCell(Text('Magento $index | D365')),
-                  DataCell(Text('Customer Create')),
-                  DataCell(Text('18 Jul 2019 18:07:05')),
-                  DataCell(Text('Inventory  for ”Phones” successfully synced')),
-                ],
-              ),
-            ),
-          ),
+          child: _dataTable(),
+        ),
+      ),
+    );
+  }
+
+  Widget _dataTable() {
+    return DataTable(
+      columns: const <DataColumn>[
+        DataColumn(
+          label: Text('Store Name'),
+        ),
+        DataColumn(
+          label: Text('Service Name'),
+        ),
+        DataColumn(
+          label: Text('Date'),
+        ),
+        DataColumn(
+          label: Text('Message'),
+        ),
+      ],
+      rows: List<DataRow>.generate(
+        numItems,
+        (index) => DataRow(
+          cells: [
+            DataCell(Text('Magento $index | D365')),
+            DataCell(Text('Customer Create')),
+            DataCell(Text('18 Jul 2019 18:07:05')),
+            DataCell(Text('Inventory  for ”Phones” successfully synced')),
+          ],
         ),
       ),
     );
